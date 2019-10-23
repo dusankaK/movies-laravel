@@ -11,6 +11,10 @@
 |
 */
 
+use App\Http\Controllers\MoviesController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/movies', 'MoviesController@index');
