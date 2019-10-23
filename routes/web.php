@@ -17,3 +17,4 @@ Route::get('/', 'MoviesController@index');
 
 Route::get('/movies', 'MoviesController@index')->name('movies.index');
 Route::get('/movies/{id}', 'MoviesController@show')->name('movies.single-movie');
+Route::get('/create', 'MoviesController@create')->name('movies.create');
