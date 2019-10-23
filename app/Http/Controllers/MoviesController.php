@@ -17,7 +17,7 @@ class MoviesController extends Controller
 
     public function show($id)
     {
-        $movie = Movie::findorFail($id);
+        $movie = Movie::with('comments')->findorFail($id);
         return view('movies.single-movie', compact('movie'));
     }
 
