@@ -29,4 +29,22 @@
         </ul>
     </div>
     @endif
+
+    <div class="container">
+        <h3>Create comment</h3>
+        <form method="POST" action="{{ route('store.comment') }}">
+            @csrf
+
+            <div class="form-group">
+                <label for="content">Comment: </label>
+                <textarea name="content" id="content" class="form-control"></textarea>
+                @include('partials.error-message', ['fieldTitle' => 'content']) 
+            </div>
+            <input type="hidden" name="movie_id" value="{{ $movie->id }}" />
+        
+            <button type="submit" class="btn btn-primary">
+                Submit
+            </button>
+        </form>
+    </div>    
 @endsection
