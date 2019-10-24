@@ -9,6 +9,8 @@ use App\Http\Requests\Movies;
 
 class MoviesController extends Controller
 {
+    protected $latest_movies;
+    
     public function index()
     {
         $movies = Movie::all();

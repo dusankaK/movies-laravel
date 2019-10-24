@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\View;
 use App\Comment;
 
 class Movie extends Model
@@ -13,4 +14,6 @@ class Movie extends Model
     {   
         return $this->hasMany(Comment::class);
     }
+
+    
 }
